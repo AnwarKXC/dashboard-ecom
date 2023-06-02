@@ -1,6 +1,5 @@
-import Layout from "@/pages/Layout";
 import ProductForm from "./productForm";
-
+import Layout from "../Layout";
 
 export default function NewProducs () {
    return (

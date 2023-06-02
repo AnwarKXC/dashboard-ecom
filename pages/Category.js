@@ -1,5 +1,4 @@
-import Layout from "./Layout";
-import { useEffect, useState } from "react";
+import Layout from "@/components/Layout"; import { useEffect, useState } from "react";
 import axios from "axios";
 import { withSwal } from 'react-sweetalert2';
 

@@ -1,6 +1,8 @@
 import Layout from "../Layout";
 import { useEffect } from "react";
-import  useRouter  from "react";
+import { useRouter } from "next/router";
+
+
 
 export default async function ProductInfo () {
 
@@ -11,14 +13,15 @@ export default async function ProductInfo () {
          return;
       };
       axios.get( '/api/products?id=' + id ).then( res => {
-         product( res.data );
+      const   product= res.data ;
       } );
    }, [ id ] );
 
 
    return (
       <Layout>
-         <label>Product Name: {product?.name } </label>
+         { product.map( ( product ) => ( <div key={product.id}><label>Product Name:{product.name} </label></div> ))}
+         
       </Layout>
    );
 }
