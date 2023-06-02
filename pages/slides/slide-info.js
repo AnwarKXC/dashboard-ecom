@@ -1,6 +1,6 @@
 import Layout from "../Layout";
 import { useEffect } from "react";
-import { useRouter } from "react";
+import  useRouter  from "react";
 
 export default async function SlideInfo () {
 
