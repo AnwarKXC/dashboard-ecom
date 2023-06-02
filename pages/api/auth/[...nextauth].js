@@ -3,7 +3,12 @@ import GoogleProvider from 'next-auth/providers/google';
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "../../../lib/mongodb";
 import { getServerSession } from 'next-auth';
- const adminEmails = [ 'anwarkamaleg2000@gmail.com', ];
+
+
+
+
+
+//  const adminEmails = [ 'anwarkamaleg2000@gmail.com', ];
 
 
 export default NextAuth( {
@@ -45,18 +50,18 @@ export const authOptions = {
          if ( adminEmails.includes( session?.user?.email ) ) {
             return session;
          } else {
-            return !session;
+            return ;
          }
       },
    },
 };
 
 
-export async function isAdminRequest ( req, res ) {
-   const session = await getServerSession( req, res, authOptions );
-   if ( !adminEmails.includes( session?.user?.email ) ) {
-      res.status( 404 );
-      res.end();
-      throw 'not an admin';
-   }
-}
+// export async function isAdminRequest ( req, res ) {
+//    const session = await getServerSession( req, res, authOptions );
+//    if ( !adminEmails.includes( session?.user?.email ) ) {
+//       res.status( 404 );
+//       res.end();
+//       throw 'not an admin';
+//    }
+// }

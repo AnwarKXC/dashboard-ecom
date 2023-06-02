@@ -19,8 +19,9 @@ export default function Home () {
     return (
 
       <main className=" flex justify-center items-center flex-col bg-slate-600 w-screen h-screen">
-        <h2 className=" text-slate-900 font-semibold text-3xl p-8"> not Admin </h2>
-        <div><button className=" p-2 px-8 bg-slate-800 text-white rounded-md" onClick={ () => signIn() }>Sign in </button></div>
+        <h1>Welcome in Dashboard E-commerce </h1>
+        <h2 className=" text-slate-900 font-semibold text-3xl p-8"> please Sign in first </h2>
+        <div><button className=" p-2 px-8 bg-slate-800 text-white rounded-md" onClick={ () => signIn() }>Enter </button></div>
       </main>
 
     )
