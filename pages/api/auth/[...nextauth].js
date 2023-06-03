@@ -14,6 +14,7 @@ import { getServerSession } from 'next-auth';
 export default NextAuth( {
    providers: [
       GoogleProvider( {
+         secret: process.env.SECRET,
          clientId: process.env.GOOGLE_ID,
          clientSecret: process.env.GOOGLE_SECRET,
          authorization: {
