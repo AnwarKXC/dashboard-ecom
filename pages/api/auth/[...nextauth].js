@@ -8,7 +8,7 @@ import { getServerSession } from 'next-auth';
 
 
 
- const adminEmails = [ 'anwarkamaleg2000@gmail.com', ];
+const adminEmails = [ 'anwarkamaleg2000@gmail.com', "fyotol@gmail.com"];
 
 
 export default NextAuth( {
