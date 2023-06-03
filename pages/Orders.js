@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import Head from "next/head";
 
 
 
@@ -22,6 +22,10 @@ export default function Orders () {
    }, [] );
 
    return (
+      <>
+         <Head>
+            <title>Orders</title>
+         </Head>
       <Layout>
          <h1>Orders</h1>
          <table className="general-table">
@@ -60,6 +64,7 @@ export default function Orders () {
             </tbody>
          </table>
 
-      </Layout>
+         </Layout>
+         </>
    );
 }

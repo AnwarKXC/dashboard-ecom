@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout"; import { useEffect, useState } from "react";
 import axios from "axios";
 import { withSwal } from 'react-sweetalert2';
+import Head from "next/head";
 
 function Categories ( { swal } ) {
    const [ editedCategory, setEditedCategory ] = useState( null );
@@ -99,6 +100,10 @@ function Categories ( { swal } ) {
    }
 
    return (
+      <>
+         <Head>
+            <title>Products</title>
+         </Head>
       <Layout>
          <h1>Categories</h1>
          <label>
@@ -134,8 +139,6 @@ function Categories ( { swal } ) {
                   Add new property
                </button>
                </div>
-
-
                { properties.length > 0 && properties.map( ( property, index ) => (
                   <div key={ property.index } className="flex gap-1 my-4">
                      <input type="text"
@@ -207,7 +210,8 @@ function Categories ( { swal } ) {
                </tbody>
             </table>
          ) }
-      </Layout>
+         </Layout>
+         </>
    );
 }
 
