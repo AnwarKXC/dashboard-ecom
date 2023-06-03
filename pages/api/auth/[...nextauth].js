@@ -12,9 +12,9 @@ import { getServerSession } from 'next-auth';
 
 
 export default NextAuth( {
+   secret: process.env.SECRET,
    providers: [
       GoogleProvider( {
-         secret: process.env.SECRET,
          clientId: process.env.GOOGLE_ID,
          clientSecret: process.env.GOOGLE_SECRET,
          authorization: {
@@ -31,10 +31,11 @@ export default NextAuth( {
 
 
 export const authOptions = {
+   secret: process.env.SECRET,
 
    providers: [
+
       GoogleProvider( {
-         secret: process.env.SECRET,
          clientId: process.env.GOOGLE_ID,
          clientSecret: process.env.GOOGLE_SECRET,
          authorization: {
