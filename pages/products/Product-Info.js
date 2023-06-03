@@ -1,4 +1,4 @@
-import Layout from "../Layout";
+import Layout from "../../components/Layout";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -13,15 +13,15 @@ export default async function ProductInfo () {
          return;
       };
       axios.get( '/api/products?id=' + id ).then( res => {
-      const   product= res.data ;
+         const product = res.data;
       } );
    }, [ id ] );
 
 
    return (
       <Layout>
-         { product.map( ( product ) => ( <div key={product.id}><label>Product Name:{product.name} </label></div> ))}
-         
+         { product.map( ( product ) => ( <div key={ product.id }><label>Product Name:{ product.name } </label></div> ) ) }
+
       </Layout>
    );
 }
