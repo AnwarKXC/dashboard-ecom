@@ -13,12 +13,13 @@ export default async function ProductInfo () {
          return;
       };
       axios.get( '/api/products?id=' + id ).then( res => {
-         const product = res.data;
+         product = res.data;
       } );
    }, [ id ] );
 
 
    return (
+      
       <Layout>
          { product.map( ( product ) => ( <div key={ product.id }><label>Product Name:{ product.name } </label></div> ) ) }
 
