@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import ProductForm from "../productForm";
+import ProductForm from "../../../components/products/productForm";
 import axios from "axios";
 import Head from "next/head";
 
