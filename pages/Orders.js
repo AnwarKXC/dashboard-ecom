@@ -43,7 +43,7 @@ export default function Orders () {
                      <td>{ ( new Date( order.createdAt ) ).toLocaleString() }
                      </td>
                      <td >
-                        <span className={ order.paid ? 'text-green-600 font-semibold text-xl ' : 'text-red-700 font-semibold text-xl ' } >{ order.paid ? 'YES' : 'NO' }</span>  
+                        <span className={  order.paid ? 'text-green-600 font-semibold ' : 'text-red-700 font-semibold' } >{ order.paid ? 'YES' : 'NO' }</span>  
                      </td>
                      <td>
                         { order.name } { order.email }<br />
@@ -53,7 +53,7 @@ export default function Orders () {
                      <td>
                         { order.line_items.map( l => (
                            <>
-                              <span className=" text-red-900 font-bold text-xl pr-2"> 
+                              <span className=" text-red-950 font-semibold text-base "> 
                                  { l.quantity }x</span>
                               { l.price_data?.product_data?.name } <br />
                            </>

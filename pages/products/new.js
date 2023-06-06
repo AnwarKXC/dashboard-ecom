@@ -1,5 +1,6 @@
-import ProductForm from "./productForm";
+import ProductForm from "../../components/productForm";
 import Layout from "../../components/Layout";
+import Image from "next/image";
 
 export default function NewProducs () {
    return (

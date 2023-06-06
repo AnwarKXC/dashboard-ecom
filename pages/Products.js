@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Head from "next/head";
-
+import Image from "next/image";
 
 
 
@@ -40,7 +40,7 @@ export default function Products () {
           { products.map( product => (
             <tr key={ product.id }>
               <td>{ product.name }</td>
-              <td className="flex gap-1">{ product.images.map( image => ( <span key={ image }> <img className="w-16 h-16 rounded-lg " src={ `${ image }` } alt="" /> </span> ) ) }</td>
+              <td className="flex gap-1">{ product.images.map( image => ( <span key={ image }> <Image width={100} height={100} className="rounded-lg w-16 h-16 object-cover "   src={ `${ image }` } alt="" /> </span> ) ) }</td>
 
               <td >
                 <Link href={ '/products/edit/' + product._id } className="btn-prim">

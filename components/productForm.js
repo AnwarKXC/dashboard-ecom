@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { ReactSortable } from "react-sortablejs";
 import Spinner from "./spinner";
-
+import Image from "next/image";
 
 export default function ProductForm ( {
    _id,
@@ -106,7 +106,7 @@ export default function ProductForm ( {
 
             { propertiesToFill.length > 0 && propertiesToFill.map( p => (
                <div key={ p.name } className=" flex rounded-lg border-slate-200 bg-slate-400 p-1">
-                  <label>{ p.name[ 0 ]+ p.name.substring( 1 ) }</label>
+                  <label>{ p.name[ 0 ] + p.name.substring( 1 ) }</label>
                   <div>
                      <select value={ productProperties[ p.name ]
 
@@ -133,7 +133,7 @@ export default function ProductForm ( {
                setList={ updateImagesOrder }>
                { !!images?.length && images.map( link => (
                   <div key={ link } className="h-24  shadow-md rounded-xl border-2 border-gray-100">
-                     <img src={ link } alt="" className="rounded-lg" />
+                     <img  src={ link } alt="" className="rounded-lg" />
 
                   </div>
                ) ) }
@@ -150,7 +150,7 @@ export default function ProductForm ( {
                <div>
                   Add image
                </div>
-               <input type="file" onChange={ uploadImages } className="hidden" />
+               <input type="file" multiple onChange={ uploadImages } className="hidden" />
             </label>
          </div>
          <label>Description</label>

@@ -36,5 +36,5 @@ label{
 @apply text-xs md:text-sm text-white bg-slate-600 text-center 
 }
 .general-table tr td{
-   @apply text-xs  md:text-sm border-2 border-slate-400 px-2 text-slate-900  font-semibold bg-slate-200
+   @apply text-xs  md:text-sm border border-slate-400  md:px-2 text-slate-900   bg-slate-200 
 }
