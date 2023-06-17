@@ -36,17 +36,14 @@ export default function ProductForm ( {
          name, description, price, images, category,
          properties: productProperties
       };
-      if ( _id ) {
-         //update
-         await axios.put( '/api/products', { ...data, _id } );
-      } else {
+
          //create
-         await axios.post( '/api/products', data );
-      }
+         await axios.post( '/api/slides', data );
+      
       setGoToProducts( true );
    }
    if ( goToProducts ) {
-      router.push( '/Products' );
+      router.push( '/Slides' );
    }
    async function uploadImages ( ev ) {
       const files = ev.target?.files;
@@ -134,7 +131,7 @@ export default function ProductForm ( {
                setList={ updateImagesOrder }>
                { !!images?.length && images.map( link => (
                   <div key={ link } className="h-24  shadow-md rounded-xl border-2 border-gray-100">
-                     <img  src={ link } alt="" className="rounded-lg" />
+                     <img src={ link } alt="" className="rounded-lg" />
 
                   </div>
                ) ) }
@@ -171,7 +168,7 @@ export default function ProductForm ( {
             className="btn-prim">
             Save
          </button>
-         <button onClick={ () => router.push( '/Products' ) } className="btn-prim">Cancel </button>
+         <button onClick={ () => router.push( '/Slides' ) } className="btn-prim">Cancel </button>
       </form>
    );
 }
