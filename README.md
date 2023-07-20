@@ -8,4 +8,6 @@
 - create MongoDB models 
 - upload, updated, and delete items with many features such as properties, categories, images, and description
 - View the orders and check the status of payment
-- create categories with many properties 
+- create categories with many properties
+
+  ### by Anwar Kamal
